@@ -1,0 +1,9 @@
+data/raw/
+data/processed/
+.env
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.xlsx
+*.xls
