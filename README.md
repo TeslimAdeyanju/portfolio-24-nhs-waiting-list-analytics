@@ -21,6 +21,8 @@ For a complete guide covering the NHS context, RTT framework, data model, pipeli
 
 This project implements a full four-stage analytics pipeline — from raw source files through to interactive dashboards — and runs two parallel deployment tracks: a **local MySQL data warehouse** and a **Databricks cloud lakehouse**.
 
+![NHS Waiting List Analytics — Pipeline Workflow](screenshots/nhs_waiting_list_work_flow.png)
+
 ### Stage 1 — Data Extraction (ETL)
 
 Operational data is pulled from NHS England's public RTT statistics pages and transformed into clean, structured files ready for loading.
