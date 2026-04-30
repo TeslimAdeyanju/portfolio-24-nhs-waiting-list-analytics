@@ -60,6 +60,11 @@ The project follows a typical analytics lifecycle:
 4. Analytical marts
 5. Reporting and dashboarding
 
+![End-to-End Analytics Pipeline](assets/end-to-end-analytics-pipeline.png)
+
+This image summarises the full flow: raw operational and public data is extracted, transformed, loaded into structured analytical tables, aggregated into an OLAP-style model, and consumed through reports, dashboards, and visualisations.
+
+
 ### Stage 1: Extract
 
 Script:
