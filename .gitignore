@@ -1,5 +1,6 @@
 data/raw/
 data/processed/
+data/databricks_upload/
 .env
 __pycache__/
 *.pyc
