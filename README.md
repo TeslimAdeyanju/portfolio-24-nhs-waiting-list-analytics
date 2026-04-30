@@ -172,7 +172,7 @@ DbVisualizer connects to the **Databricks SQL Warehouse via JDBC**, allowing ext
 
 ## Project structure
 
-```
+```text
 ├── sql/
 │   ├── schema.sql              Star schema DDL — dimensions, fact tables, reference seed data
 │   ├── etl.sql                 Staging tables, stored procedures, mart views
@@ -188,7 +188,9 @@ DbVisualizer connects to the **Databricks SQL Warehouse via JDBC**, allowing ext
 │   ├── 01_upload_processed_csvs.md     Step-by-step upload guide + DbVisualizer / Power BI connection
 │   ├── 02_create_delta_tables.sql      Creates Delta tables from uploaded CSVs
 │   ├── 03_create_gold_views.sql        v_monthly_summary and v_national_monthly gold views
-│   └── 04_dbvisualizer_queries.sql     7 analytical queries for DbVisualizer
+│   ├── 04_dbvisualizer_queries.sql     7 analytical queries for DbVisualizer
+│   ├── 05_create_star_schema.sql       Star schema layer — surrogate key resolution + wait band unpivot
+│   └── 06_star_schema_relationships.md ERD, relationship table, join patterns, design decisions
 │
 ├── powerbi/
 │   └── measures.md             All DAX measures + 5-page dashboard layout specification
