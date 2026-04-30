@@ -2,6 +2,8 @@ data/raw/
 data/processed/
 data/databricks_upload/
 .env
+CLAUDE.md
+.claude/
 __pycache__/
 *.pyc
 *.pyo
