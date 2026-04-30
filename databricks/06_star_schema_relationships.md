@@ -14,7 +14,7 @@ The schema follows the classic **star topology**: five dimension tables sit at t
 
 ## Entity Relationship Diagram
 
-![NHS Waiting List Analytics — Star Schema](screenshots2/image.png)
+![NHS Waiting List Analytics — Star Schema](../screenshots/star_schema.png)
 
 ---
 
@@ -364,7 +364,7 @@ The NHS England RTT source files publish wait bands as **columns** (one column p
 
 The star schema tables must be built in this order because later steps depend on earlier ones:
 
-```
+```text
 01_upload_processed_csvs.md   Upload CSVs to FileStore
 02_create_delta_tables.sql    Build flat fact + dimension Delta tables
                               (required before 05 can run)
