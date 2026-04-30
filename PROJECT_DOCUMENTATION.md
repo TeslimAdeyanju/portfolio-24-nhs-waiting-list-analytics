@@ -168,9 +168,9 @@ Raw files publish **52 individual weekly wait band columns** (one column per wee
 
 The project uses a **star schema** — the standard data warehouse pattern for analytical workloads. Five dimension tables provide descriptive context; three fact tables store quantitative measurements.
 
-![End-to-End Analytics Pipeline](assets/end-to-end-analytics-pipeline.png)
+![NHS Waiting List Analytics — Star Schema](screenshots/star_schema.png)
 
-The diagram above summarises the full four-stage pipeline: raw NHS England Excel files → Python ETL → structured star schema → analytical mart views → Power BI dashboard.
+The diagram above shows the full star schema: `dim_date`, `dim_trust`, `dim_region`, `dim_treatment_function`, and `dim_wait_band` surrounding the four fact tables. `dim_wait_band` joins only to `fact_rtt_wait_band_star` because the original incomplete table stores wait bands as wide columns rather than rows.
 
 ### Fact tables
 
@@ -331,6 +331,10 @@ Full technical reference for the Databricks track is in the `databricks/` direct
 ## 8. The Data Pipeline
 
 ### Overview
+
+![End-to-End Analytics Pipeline](assets/end-to-end-analytics-pipeline.png)
+
+The diagram above shows the full four-stage flow: raw NHS England Excel files → Python ETL → structured star schema → analytical mart views → Power BI dashboard.
 
 ```
 NHS England website
