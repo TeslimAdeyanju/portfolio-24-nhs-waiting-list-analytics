@@ -13,6 +13,8 @@ It models the work of an NHS performance analytics function: ingesting monthly w
 
 The core analytical question is whether apparent improvements to the NHS waiting list reflect genuine throughput gains — or a reduction in the number of patients being referred into the system in the first place.
 
+For a complete guide covering the NHS context, RTT framework, data model, pipeline, KPIs, findings, and glossary, see **[PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md)**.
+
 ---
 
 ## Data Architecture
@@ -269,6 +271,17 @@ python python/export_dimensions.py
 # 2. databricks/03_create_gold_views.sql
 # 3. Connect DbVisualizer via JDBC and run databricks/04_dbvisualizer_queries.sql
 ```
+
+---
+
+## Documentation
+
+| File | Purpose |
+| --- | --- |
+| **[PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md)** | Complete 15-section guide: NHS context, RTT framework, data model, pipeline, KPIs, findings, Power BI, glossary |
+| **[databricks/06_star_schema_relationships.md](databricks/06_star_schema_relationships.md)** | Star schema ERD, relationship table, all join patterns, design decisions |
+| **[databricks/01_upload_processed_csvs.md](databricks/01_upload_processed_csvs.md)** | Step-by-step Databricks upload guide; DbVisualizer and Power BI JDBC connection |
+| **[powerbi/measures.md](powerbi/measures.md)** | All DAX measures and 5-page dashboard layout specification |
 
 ---
 
